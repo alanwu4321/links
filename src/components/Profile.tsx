@@ -21,6 +21,7 @@ import WebLink from './WebLink';
 import Flow from './Flow';
 import Job from './Job';
 import Partner from './Partner';
+import QR from './QR';
 
 const size = '96px';
 const color = 'teal';
@@ -180,36 +181,9 @@ export default function SocialProfileSimple() {
                         w={'full'}
                         justify='center'
                     >
-                        {/* <Box w={'full'}>
-                            <Box fontWeight="extrabold" fontSize={'xl'}> <Text color="#e3007f"> {t("meetTaipei.Meet Taipei 2022")} </Text> </Box>
-                            <Stack spacing={"40px"} align={'center'} w={'full'} justify='center' mt={'20px'} >
-                                <ExpandableMeetTaipieButton />
-                            </Stack>
-                        </Box> */}
-                        {/* Facebook */}
-                        {/* <Flex
-                            flexDir={{ base: 'column', md: 'row' }}
-                            w={'full'}
-                            boxShadow={'md'}
-                            p={'10px'}
-                            rounded={'md'}
-                            align={{ base: null, md: 'center' }}
-                        >
-                            <Center>  <Flex bg="blue" width={{ base: 'full', md: '50px' }} height={'50px'} rounded="md" justifyContent='center' alignItems={'center'}>  <Image src="/assets/images/starter.png" />  </Flex> </Center>
-                            <Box w='full'>
-                                <Flex justifyContent='center' alignItems={'center'} textAlign="center" >
-                                    <Text>Text <Code> -meet ca</Code> to receive Starter and Alex's exclusive strategies</Text>
-                                </Flex>
-                            </Box>
-                        </Flex> */}
+                
                         <Box w={'full'}>
-                            {/* <Box fontWeight='extrabold' fontSize={'xl'}>
-                                {' '}
-                                <Text color='#3F73FF'>
-                                    {' '}
-                                    About Me
-                                </Text>{' '}
-                            </Box> */}
+                        
                             <Stack
                                 spacing={'40px'}
                                 align={'center'}
@@ -218,6 +192,26 @@ export default function SocialProfileSimple() {
                                 // mt={'10px'}
                             >
                                 <Job />
+                            </Stack>
+                        </Box>
+                    </Stack>
+                </Center>
+                <Center mt="5">
+                    <Stack
+                        spacing={'40px'}
+                        align={'center'}
+                        w={'full'}
+                        justify='center'
+                    >
+                        <Box w={'full'}>
+                            <Stack
+                                spacing={'40px'}
+                                align={'center'}
+                                w={'full'}
+                                justify='center'
+                                // mt={'10px'}
+                            >
+                                <QR />
                             </Stack>
                         </Box>
                     </Stack>

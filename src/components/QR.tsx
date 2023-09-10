@@ -1,5 +1,5 @@
-import { Button, Badge, ListIcon, ListItem, Box, Flex, Center, Text, Link } from '@chakra-ui/react';
-import { BsPeopleFill, BsTools } from 'react-icons/bs';
+import { Button, Badge, ListIcon, ListItem, Box, Flex, Center, Text, Link, Image } from '@chakra-ui/react';
+import { BsCode, BsPeopleFill, BsQrCode } from 'react-icons/bs';
 import { CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'react-i18next';
 import ExpandableButton from './expandable-button';
@@ -10,8 +10,8 @@ const style = {
         '0px 1px 25px -5px rgb(63 115 255 / 49%), 0 10px 10px -5px rgb(63 115 255 / 49%)',
     border: '1px solid #3F73FF',
     bg: '#3F73FF',
-    icon: <BsTools color='white' />,
-    text: 'Experienes',
+    icon: <BsQrCode color='white' />,
+    text: 'QR Code',
     listSpacing: 3,
 };
 
@@ -34,7 +34,7 @@ const positionList  = [
 
 const startupPositionList = [
     { name: 'CTO & CMO @ Crypto-Arsenal', icon: <Flex gap="2"> <img src="/assets/images/favicon.png" width='21'
-    height='21'/>  </Flex>, badge: <Link target="_blank" href={"https://ca-marketing-2023.notion.site/ca-marketing-2023/About-Crypto-Arsenal-6f60573043da4828bf298722a8a8dc0c"} >  <Badge colorScheme='purple'  >   LEARN MORE 💡   </Badge>  </Link> },
+    height='21'/>  </Flex>, badge: <Link target="_blank" href={"https://ca-marketing-2023.notion.site/ca-marketing-2023/About-Crypto-Arsenal-6f60573043da4828bf298722a8a8dc0c"} >  <Badge colorScheme='purple'  >   LEARN MORE   </Badge>  </Link> },
     // { name: 'job.Backend Internship' },
   
 ];
@@ -57,64 +57,10 @@ const jobWebList = [
 const Position = () => {
     const { t } = useTranslation();
     return (
-        <>
-            <Text fontWeight={'bold'} > Startup </Text>
-            {startupPositionList.map((position, i) => (
-                <ListItem key={i}>
-                     <Center gap={'2'}>
-                    {position?.icon } 
-                    {t(position.name)}
-                    {position?.badge}
-                     </Center>
-                </ListItem>
-            ))}
-              {/* {jobWebList.map((web, i) => (
-                <Button
-                    key={i}
-                    as='a'
-                    href={web.href}
-                    target={'_blank'}
-                    mt={10}
-                    // w={'full'}
-                    bg={web.color + '.400'}
-                    color={'white'}
-                    rounded={'xl'}
-                    boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
-                    _hover={{
-                        bg: web.color + '.500',
-                    }}
-                    _focus={{
-                        bg: web.color + '.500',
-                    }}
-                    rightIcon={<ExternalLinkIcon />}
-                >
-                    {t(web.text)}{' '}
-                    <Badge colorScheme={web.color} ml={2}>
-                        {' '}
-                        {web.openings}{' '}
-                    </Badge>
-                </Button>
-            ))} */}
-            
-            <Text fontWeight={'bold'}> Internship </Text>
-            {positionList.map((position, i) => (
-                <ListItem key={i}>
-                     <Center gap={'2'}>
-                    {position?.icon } 
-                    {t(position.name)}
-                     </Center>
-                </ListItem>
-            ))}
-            <Text fontWeight={'bold'}> Education </Text>
-             {educationPositionList.map((position, i) => (
-                <ListItem key={i}>
-                     <Center gap={'2'}>
-                    {position?.icon } 
-                    {t(position.name)}
-                     </Center>
-                </ListItem>
-            ))}
-        </>
+        <Center>
+           <Image src="/assets/images/qr-code.png"  boxSize='200px'
+    objectFit='cover'/>
+        </Center>
     );
 };
 
@@ -153,7 +99,7 @@ const JobWeb = () => {
     );
 };
 
-export default function Job() {
+export default function QR() {
     return (
         <>
             <ExpandableButton style={style}>
