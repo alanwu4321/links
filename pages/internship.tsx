@@ -47,7 +47,7 @@ const InternshipPage = () => {
                 <title>{t('internship.Intro.title')}</title>
                 <meta
                     property='og:image'
-                    content='https://links.crypto-arsenal.io/assets/images/ca-internship-cover.png'
+                    content='https://links.alan-wu.com/assets/images/ca-internship-cover.png'
                 />
                 <meta
                     property='og:title'
@@ -62,7 +62,7 @@ const InternshipPage = () => {
                 title={t('internship.Intro.title')}
                 ogTitle={t('internship.Intro.subTitle')}
                 description={t('internship.Intro.content')}
-                image='https://links.crypto-arsenal.io/assets/images/ca-internship-cover.png'
+                image='https://links.alan-wu.com/assets/images/ca-internship-cover.png'
             >
                 <Center py={3}>
                     <Box
@@ -97,7 +97,7 @@ const InternshipPage = () => {
                                 letterSpacing={'wide'}
                                 fontWeight='bold'
                             >
-                                Crypto Arsenal
+                                Alan Wu
                                 <Box ml='1'>
                                     <svg
                                         width='16'
@@ -269,7 +269,7 @@ const InternshipPage = () => {
                                                 href='https://www.youtube.com/watch?v=kcfetlFndD0&ab_channel=Crypto-Arsenal'
                                                 isExternal
                                             >
-                                                About Crypto Arsenal @ Youtube{' '}
+                                                About Alan Wu @ Youtube{' '}
                                                 <ExternalLinkIcon mx='2px' />
                                             </Link>
                                         </Text>

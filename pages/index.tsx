@@ -35,7 +35,7 @@ const IndexPage = () => {
   return (
     <PageLayout
       title='Links'
-      description='Everything Crypto Arsenal is. In one simple link.'
+      description='Everything Alan Wu is. In one simple link.'
     >
 
       <Profile />

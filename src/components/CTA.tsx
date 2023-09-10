@@ -89,7 +89,7 @@ export function SplitWithImage() {
                         alignSelf={'flex-start'}
                         rounded={'md'}
                     >
-                        Crypto Arsenal 2023
+                        Alan Wu 2023
                     </Text>
                     <Heading textAlign={'left'}>{t('internship.Campus Quantitative Team Program')}</Heading>
                     <Text

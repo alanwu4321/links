@@ -1,8 +1,10 @@
-import { Button, Badge, ListIcon, ListItem } from '@chakra-ui/react';
+import { Button, Badge, ListIcon, ListItem, Box, Flex, Center, Text } from '@chakra-ui/react';
 import { BsPeopleFill } from 'react-icons/bs';
 import { CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'react-i18next';
 import ExpandableButton from './expandable-button';
+import { FaApple, FaFacebook, FaShopify, FaYahoo } from 'react-icons/fa';
+import Link from 'next/link';
 
 const style = {
     boxShadow:
@@ -10,52 +12,107 @@ const style = {
     border: '1px solid #3F73FF',
     bg: '#3F73FF',
     icon: <BsPeopleFill color='white' />,
-    text: 'job.Join our Wordclass Team',
+    text: 'Experienes',
     listSpacing: 3,
 };
 
-const positionList = [
-    { name: 'job.Quant Intership' },
+const positionList  = [
+   
     // { name: 'job.Backend Internship' },
     // { name: 'job.Frontend Internship' },
-    { name: 'job.Marketing Internship' },
+    { name: 'SWE @ Facebook/Meta', icon:  <Flex gap="2"> <img src="/assets/images/fb.png" width='21'
+    height='21'/> <img src="/assets/images/meta.png" width='19'
+    height='19'/> </Flex> },
+    { name: 'SRE @ Apple', icon: <FaApple/> },
+    { name: 'SRE @ Tesla', icon: <img src="/assets/images/tesla.png" width='21'
+    height='21'/> },
+    { name: 'SRE @ Shopify', icon: <img src="/assets/images/shopify.svg" width='21'
+    height='21'/> },
+    { name: 'SWE @ Yahoo', icon: <img src="/assets/images/yahoo.png" width='21'
+    height='21'/> },
+   
+];
+
+const startupPositionList = [
+    { name: 'CTO & CMO @ Crypto-Arsenal', icon: <Flex gap="2"> <img src="/assets/images/favicon.png" width='21'
+    height='21'/>  </Flex>, badge: <Badge colorScheme='purple'  > <Link href={"https://ca-marketing-2023.notion.site/ca-marketing-2023/About-Crypto-Arsenal-6f60573043da4828bf298722a8a8dc0c"} target="_blank">   LEARN MORE  </Link> </Badge>  },
+    // { name: 'job.Backend Internship' },
+  
+];
+
+const educationPositionList = [
+    { name: 'Eng @ U of Waterloo', icon: <img src="/assets/images/uw.png" width='21'
+    height='21'/> },
 ];
 
 const jobWebList = [
     {
-        href: '/internship',
+        href: 'https://s.crypto-arsenal.io/about-ca',
         color: 'purple',
-        text: 'internship.Quantitative Internship Program 👩‍💻',
+        text: 'Learn about Crypto-Arsenal',
         openings: '1 NEW',
     },
-    {
-        href: 'https://www.104.com.tw/job/81xca?jobsource=checkc',
-        color: 'orange',
-        text: '104',
-        openings: '1 NEW',
-    },
-    {
-        href: 'https://www.cakeresume.com/companies/crypto-arsenal/jobs',
-        color: 'green',
-        text: 'Cakeresume',
-        openings: '3 NEW',
-    },
-    {
-        href: 'https://www.yourator.co/companies/Crypto-Arsenal',
-        color: 'blue',
-        text: 'Yourator',
-        openings: '4 NEW',
-    },
+  
 ];
 
 const Position = () => {
     const { t } = useTranslation();
     return (
         <>
+            <Text fontWeight={'bold'} > Startup </Text>
+            {startupPositionList.map((position, i) => (
+                <ListItem key={i}>
+                     <Center gap={'2'}>
+                    {position?.icon } 
+                    {t(position.name)}
+                    {position?.badge}
+                     </Center>
+                </ListItem>
+            ))}
+              {/* {jobWebList.map((web, i) => (
+                <Button
+                    key={i}
+                    as='a'
+                    href={web.href}
+                    target={'_blank'}
+                    mt={10}
+                    // w={'full'}
+                    bg={web.color + '.400'}
+                    color={'white'}
+                    rounded={'xl'}
+                    boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
+                    _hover={{
+                        bg: web.color + '.500',
+                    }}
+                    _focus={{
+                        bg: web.color + '.500',
+                    }}
+                    rightIcon={<ExternalLinkIcon />}
+                >
+                    {t(web.text)}{' '}
+                    <Badge colorScheme={web.color} ml={2}>
+                        {' '}
+                        {web.openings}{' '}
+                    </Badge>
+                </Button>
+            ))} */}
+            
+            <Text fontWeight={'bold'}> Internship </Text>
             {positionList.map((position, i) => (
                 <ListItem key={i}>
-                    <ListIcon as={CheckIcon} color='green.400' />
+                     <Center gap={'2'}>
+                    {position?.icon } 
                     {t(position.name)}
+                     </Center>
+                </ListItem>
+            ))}
+            <Text fontWeight={'bold'}> Education </Text>
+             {educationPositionList.map((position, i) => (
+                <ListItem key={i}>
+                     <Center gap={'2'}>
+                    {position?.icon } 
+                    {t(position.name)}
+                     </Center>
                 </ListItem>
             ))}
         </>
@@ -102,7 +159,7 @@ export default function Job() {
         <>
             <ExpandableButton style={style}>
                 <Position />
-                <JobWeb />
+                {/* <JobWeb /> */}
             </ExpandableButton>
         </>
     );

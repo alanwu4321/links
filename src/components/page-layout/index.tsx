@@ -40,16 +40,16 @@ const PageLayout = ({ title, description, children, image, ogTitle }: PageProps)
   return (
     <>
       <NextSeo
-        title={title + ' | Crypto Arsenal'}
+        title={title + ' | Alan Wu'}
         description={description}
 
         twitter={{
           cardType: 'summary_large_image',
-          handle: 'CryptoArsena1',
+          handle: 'alanwuuuuuu',
         }}
         openGraph={{
-          url: 'https://links.crypto-arsenal.io' + router.pathname,
-          title: ogTitle ?? title + ' | Crypto Arsenal',
+          url: 'https://links.alan-wu.com' + router.pathname,
+          title: ogTitle ?? title + ' | Alan Wu',
           description: description,
           type: "website",
           locale: 'en_US',
@@ -58,17 +58,17 @@ const PageLayout = ({ title, description, children, image, ogTitle }: PageProps)
               url: image ?? 'https://crypto-arsenal.io/_next/image?url=%2Fstatic%2Flanding-page-rwd%2Fmain-computer.png&w=1920&q=7',
               // width: 1200,
               // height: 630,
-              alt: 'Links | Crypto Arsenal',
+              alt: 'Links | Alan Wu',
               type: 'image/png',
             },
           ],
         }}
-        additionalLinkTags={[
-          {
-            rel: 'icon',
-            href: 'https://crypto-arsenal.io/static/favicon/dark-32.png',
-          },
-        ]}
+        // additionalLinkTags={[
+        //   {
+        //     rel: 'icon',
+        //     href: 'https://crypto-arsenal.io/static/favicon/dark-32.png',
+        //   },
+        // ]}
       />
       <Center
         display='flex'

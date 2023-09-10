@@ -13,6 +13,7 @@ import {
     Icon,
     Link,
 } from '@chakra-ui/react';
+
 import { BsFillHeartPulseFill } from 'react-icons/bs';
 import { useTranslation } from 'react-i18next';
 import Community from '../components/Community';
@@ -39,7 +40,7 @@ const pulseRing = keyframes`
 
 export default function SocialProfileSimple() {
     const { t } = useTranslation();
-    const banner = '/assets/images/banner.png';
+    const banner = '/assets/images/1500x500.jpeg';
     const theme = useTheme();
     return (
         <Center py={3}>
@@ -56,15 +57,15 @@ export default function SocialProfileSimple() {
                 <Box
                     bg={`url(${banner})`}
                     bgSize='cover'
-                    borderRadius='16px'
-                    h='131px'
+                    borderRadius='5px'
+                    h='151px'
                     w='100%'
                 />
                 <Avatar
-                    mt='-42px'
+                    mt='-52px'
                     border='4px solid'
                     size={'xl'}
-                    src={'/assets/images/ca1.png'}
+                    src={'/assets/images/alan.jpg'}
                     // alt={'Avatar Alt'}
                     mb={4}
                     pos={'relative'}
@@ -88,7 +89,7 @@ export default function SocialProfileSimple() {
                         letterSpacing={'wide'}
                         fontWeight='bold'
                     >
-                        Crypto Arsenal
+                        Alan Wu
                         <Box ml='1'>
                             <svg
                                 width='16'
@@ -112,16 +113,17 @@ export default function SocialProfileSimple() {
                         </Box>
                     </Flex>
                 </Heading>
-                <Box mb={4}>
+                <Box mb={2}>
                     <Text
                         fontWeight={'semibold'}
                         color={'gray.500'}
                         as='a'
-                        href='https://twitter.com/_cryptoarsenal_'
+                        href='https://twitter.com/alanwuuuuuu'
                     >
-                        @CryptoArsena1
+                        @alanwuuuuuu
                     </Text>
                 </Box>
+                
                 <Text
                     fontSize={'sm'}
                     fontWeight={'thin'}
@@ -130,14 +132,12 @@ export default function SocialProfileSimple() {
                     color={useColorModeValue('gray.700', 'gray.400')}
                     px={3}
                 >
-                    📄 {t('intro.Strategy Development')} &{' '}
-                    {t('intro.Copy Trading')} 🔗{' '}
-                    {t('intro.Integration with APIs of Major Exchanges')} 👨🏻‍💻
-                    TradingView & Python
+                    TPE 🇹🇼 CA 🇨🇦 SF 🇺🇸 SYD 🇦🇺 <br/> 
+🏄🏻‍♂️🏂🛹🏈🏉🏀🎹🎻💻
                 </Text>
 
-                <Flow />
-                <WebLink />
+                {/* <Flow /> */}
+                {/* <WebLink /> */}
                 <Community />
 
                 {/* <Stack mt={8} direction={'row'} spacing={4}>
@@ -168,10 +168,11 @@ export default function SocialProfileSimple() {
                         Follow
                     </Button>
                 </Stack> */}
-                <Box m={6}>
+                <Box m={4}>
                     <Divider />
                 </Box>
                 <Center>
+                    
                     <Stack
                         spacing={'40px'}
                         align={'center'}
@@ -201,19 +202,19 @@ export default function SocialProfileSimple() {
                             </Box>
                         </Flex> */}
                         <Box w={'full'}>
-                            <Box fontWeight='extrabold' fontSize={'xl'}>
+                            {/* <Box fontWeight='extrabold' fontSize={'xl'}>
                                 {' '}
                                 <Text color='#3F73FF'>
                                     {' '}
-                                    {t('job.Work with Us')}{' '}
+                                    About Me
                                 </Text>{' '}
-                            </Box>
+                            </Box> */}
                             <Stack
                                 spacing={'40px'}
                                 align={'center'}
                                 w={'full'}
                                 justify='center'
-                                mt={'20px'}
+                                // mt={'10px'}
                             >
                                 <Job />
                             </Stack>
@@ -225,7 +226,7 @@ export default function SocialProfileSimple() {
                     <Divider />
                 </Box>
 
-                <Partner />
+                {/* <Partner /> */}
             </Box>
         </Center>
     );

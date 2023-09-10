@@ -27,15 +27,16 @@ const Links = [
   {
     name: 'tabs.Home',
     icon: '🏠',
-  },
-  {
-    name: 'tabs.Quantitative Internship Program',
-    icon: '👩‍💻',
-  },
-  {
-    name: 'tabs.Status',
-    icon: <Icon as={BsFillHeartPulseFill} color='red.500'/>,
-  },
+  }
+//   ,
+//   {
+//     name: 'tabs.Quantitative Internship Program',
+//     icon: '👩‍💻',
+//   },
+//   {
+//     name: 'tabs.Status',
+//     icon: <Icon as={BsFillHeartPulseFill} color='red.500'/>,
+//   },
 ];
 const LinksURL = ['/', '/internship', 'https://status.crypto-arsenal.io/'];
 
@@ -100,7 +101,7 @@ function WithAction() {
                             w='100%'
                         >
                             {/* <Flex>
-        <Text> Crypto Arsenal</Text>
+        <Text> Alan Wu</Text>
       </Flex> */}
                             {/* <Flex> */}
                             <ThemeButton />
