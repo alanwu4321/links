@@ -132,7 +132,8 @@ export default function SocialProfileSimple() {
                     color={useColorModeValue('gray.700', 'gray.400')}
                     px={3}
                 >
-                    TPE 🇹🇼 CA 🇨🇦 SF 🇺🇸 SYD 🇦🇺 <br/> 
+                    📍 Token 2049 🇸🇬 | TPE 🇹🇼 CA 🇨🇦 SF 🇺🇸 SYD 🇦🇺
+                    <br/>
 🏄🏻‍♂️🏂🛹🏈🏉🏀🎹🎻💻
                 </Text>
 

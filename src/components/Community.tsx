@@ -83,7 +83,7 @@ const communityList = [
 export default function Community() {
     const { t } = useTranslation();
     return (
-        <Wrap spacing='2px' justify='center' mt={3}>
+        <Wrap spacing='3px' gap="2" rowGap="2" justify='center' mt={3}>
             {communityList.map((community, i) => (
                 <Button
                     key={i}
