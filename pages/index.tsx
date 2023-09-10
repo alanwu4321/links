@@ -26,18 +26,17 @@ import { useEffect } from 'react';
 import { useAnalytics } from '../src/utils/analytics';
 const IndexPage = () => {
   const { t } = useTranslation();
-  const { analytics } = useAnalytics()
+  // const { analytics } = useAnalytics()
 
-  useEffect(() => {
-    analytics.page('Links')
-  }, [])
+  // useEffect(() => {
+  //   analytics.page('Links')
+  // }, [])
 
   return (
     <PageLayout
       title='Links'
       description='Everything Alan Wu is. In one simple link.'
     >
-
       <Profile />
       {/* <Social /> */}
       {/* <Stack

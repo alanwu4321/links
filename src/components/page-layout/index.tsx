@@ -55,7 +55,7 @@ const PageLayout = ({ title, description, children, image, ogTitle }: PageProps)
           locale: 'en_US',
           images: [
             {
-              url: image ?? 'https://crypto-arsenal.io/_next/image?url=%2Fstatic%2Flanding-page-rwd%2Fmain-computer.png&w=1920&q=7',
+              url: image ?? '/assets/images/1500x500.jpeg',
               // width: 1200,
               // height: 630,
               alt: 'Links | Alan Wu',
@@ -63,12 +63,12 @@ const PageLayout = ({ title, description, children, image, ogTitle }: PageProps)
             },
           ],
         }}
-        // additionalLinkTags={[
-        //   {
-        //     rel: 'icon',
-        //     href: 'https://crypto-arsenal.io/static/favicon/dark-32.png',
-        //   },
-        // ]}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/assets/images/favicon.ico',
+          },
+        ]}
       />
       <Center
         display='flex'

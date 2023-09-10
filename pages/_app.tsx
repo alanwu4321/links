@@ -9,11 +9,11 @@ import { AppProps } from 'next/app';
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
-      <AnalyticsProvider>
+      {/* <AnalyticsProvider> */}
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </AnalyticsProvider>
+      {/* </AnalyticsProvider> */}
     </ChakraProvider>
   );
 };
