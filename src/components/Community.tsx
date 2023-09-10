@@ -18,11 +18,6 @@ import { useTranslation } from 'react-i18next';
 
 const communityList = [
     {
-        href: 'https://wa.me/qr/PQW5OSQ2J4NHP1',
-        icon: <BsWhatsapp />,
-        text: 'Whatsapp',
-    },
-    {
         href: 'https://twitter.com/alanwuuuuuu',
         icon: <FaTwitter />,
         text: 'Twitter',
@@ -31,6 +26,11 @@ const communityList = [
         href: 'https://t.me/alanwu4321',
         icon: <BsTelegram />,
         text: 'Telegram',
+    },
+    {
+        href: 'https://wa.me/qr/PQW5OSQ2J4NHP1',
+        icon: <BsWhatsapp />,
+        text: 'Whatsapp',
     },
     {
         href: 'https://www.linkedin.com/in/alan-cl-wu/',

@@ -22,23 +22,24 @@ import {
 import { BsFillHeartPulseFill } from 'react-icons/bs';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'react-i18next';
+import { FaMusic } from 'react-icons/fa';
 
 const Links = [
   {
-    name: 'tabs.Home',
-    icon: '🏠',
+    name: 'Links',
+    icon: '🔗',
   }
-//   ,
-//   {
-//     name: 'tabs.Quantitative Internship Program',
-//     icon: '👩‍💻',
-//   },
-//   {
-//     name: 'tabs.Status',
-//     icon: <Icon as={BsFillHeartPulseFill} color='red.500'/>,
-//   },
+  ,
+  {
+    name: 'Website',
+    icon: '👩‍💻',
+  },
+  {
+    name: 'Music',
+    icon: '🎵',
+  },
 ];
-const LinksURL = ['/', '/internship', 'https://status.crypto-arsenal.io/'];
+const LinksURL = ['/', 'http://alan-wu.com/', 'https://music.alan-wu.com/'];
 
 const NavLink = ({ children, idx }: { children: ReactNode; idx: number }) => (
     <Link

@@ -1,10 +1,9 @@
-import { Button, Badge, ListIcon, ListItem, Box, Flex, Center, Text } from '@chakra-ui/react';
+import { Button, Badge, ListIcon, ListItem, Box, Flex, Center, Text, Link } from '@chakra-ui/react';
 import { BsPeopleFill } from 'react-icons/bs';
 import { CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'react-i18next';
 import ExpandableButton from './expandable-button';
 import { FaApple, FaFacebook, FaShopify, FaYahoo } from 'react-icons/fa';
-import Link from 'next/link';
 
 const style = {
     boxShadow:
@@ -35,7 +34,7 @@ const positionList  = [
 
 const startupPositionList = [
     { name: 'CTO & CMO @ Crypto-Arsenal', icon: <Flex gap="2"> <img src="/assets/images/favicon.png" width='21'
-    height='21'/>  </Flex>, badge: <Badge colorScheme='purple'  > <Link href={"https://ca-marketing-2023.notion.site/ca-marketing-2023/About-Crypto-Arsenal-6f60573043da4828bf298722a8a8dc0c"} target="_blank">   LEARN MORE  </Link> </Badge>  },
+    height='21'/>  </Flex>, badge: <Link target="_blank" href={"https://ca-marketing-2023.notion.site/ca-marketing-2023/About-Crypto-Arsenal-6f60573043da4828bf298722a8a8dc0c"} >  <Badge colorScheme='purple'  >   LEARN MORE   </Badge>  </Link> },
     // { name: 'job.Backend Internship' },
   
 ];
