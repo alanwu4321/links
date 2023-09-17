@@ -13,7 +13,7 @@ import {
     FaReddit,
     FaTwitter,
 } from 'react-icons/fa';
-import { BsGithub, BsInstagram, BsLine, BsTelegram, BsWhatsapp } from 'react-icons/bs';
+import { BsCalendar, BsCalendar2, BsGithub, BsInstagram, BsLine, BsTelegram, BsWhatsapp } from 'react-icons/bs';
 import { useTranslation } from 'react-i18next';
 
 const communityList = [
@@ -58,6 +58,10 @@ const communityList = [
         icon: <FaFacebook />,
         text: 'Facebook',
     },
+    {  href: 'https://calendly.com/alan-cl-wu/30min',
+    icon: <BsCalendar2 />,
+    text: 'Calendly',
+    }
     // {
     //     href: 'https://www.tradingview.com/u/Crypto-Arsenal/',
     //     icon: (
