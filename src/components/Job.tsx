@@ -11,7 +11,7 @@ const style = {
     border: '1px solid #3F73FF',
     bg: '#3F73FF',
     icon: <BsTools color='white' />,
-    text: 'Experienes',
+    text: 'Experiences',
     listSpacing: 3,
 };
 
